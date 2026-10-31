@@ -1,0 +1,30 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class ColorShapes extends JPanel {
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        // Draw a red rectangle
+        g.setColor(Color.RED);
+        g.fillRect(50, 50, 100, 60);
+
+        // Draw a blue oval
+        g.setColor(Color.BLUE);
+        g.fillOval(200, 50, 100, 60);
+
+        // Display a bold message
+        g.setColor(Color.BLACK);
+        g.setFont(new Font("Arial", Font.BOLD, 18));
+        g.drawString("Java Applets are fun!", 50, 160);
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Color Shapes");
+        frame.add(new ColorShapes());
+        frame.setSize(400, 250);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
