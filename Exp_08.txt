@@ -1,0 +1,23 @@
+interface Interface{
+    void studentDetails();
+}
+interface Marks{
+    void marksDetails();
+}
+class Result implements Interface, Marks{
+    public void studentDetails(){
+        System.out.println("Name: Lohitha");
+        System.out.println("Roll No: 384");
+
+    }
+    public void marksDetails(){
+        System.out.println("Marks : 80");
+    } 
+}
+class Main{
+    public static void main(String args[]){
+        Result r = new Result();
+        r.studentDetails();
+        r.marksDetails();
+    }
+}
