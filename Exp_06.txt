@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class SingleInher {
+    int id;
+    String name;
+    double basic;
+    void getData(){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter ID :");
+        id = sc.nextInt();
+        sc.nextLine();
+        
+        System.out.println("Enter Name: ");
+        name = sc.nextLine();
+
+        System.out.println("Enter the Basic Salary:");
+        basic = sc.nextDouble();
+    } 
+}
+class PermanentEmlpoyee extends SingleInher{
+    double hra,da,gross;
+    void calculate(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter HRA: ");
+        hra = sc.nextDouble();
+        System.out.println("Enter DA: ");
+        da = sc.nextDouble();
+        gross = basic + hra + da;
+
+    }
+    void display(){
+        System.out.println("ID: "+ id);
+        System.out.println("Name: "+ name);
+        System.out.println("Gross Salary: "+ gross);
+    }
+    public static void main(String args[]){
+        PermanentEmlpoyee p = new PermanentEmlpoyee();
+        p.getData();
+        p.calculate();
+        p.display();
+    }
+}
