@@ -1,0 +1,36 @@
+class Multi_Student {
+    String name = "Seetha";
+    int rollno = 101;
+}
+
+class Marks extends Multi_Student {
+    int m1 = 80;
+    int m2 = 75;
+    int m3 = 90;
+    int m4 = 85;
+    int m5 = 70;
+}
+
+class Result extends Marks {
+    void display() {
+        int total = m1 + m2 + m3 + m4 + m5;
+        double average = total / 5.0;
+
+        System.out.println("Name : " + name);
+        System.out.println("Roll No : " + rollno);
+        System.out.println("Total : " + total);
+        System.out.println("Average : " + average);
+
+        if (average >= 50)
+            System.out.println("Grade : Pass");
+        else
+            System.out.println("Grade : Fail");
+    }
+}
+
+class Main {
+    public static void main(String args[]) {
+        Result r = new Result();
+        r.display();
+    }
+}
