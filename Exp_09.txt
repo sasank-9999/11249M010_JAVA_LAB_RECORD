@@ -1,0 +1,13 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+package studentInfo;
+
+public class Student {
+   public Student() {
+   }
+
+   public void displayInfo() {
+      System.out.println("Student Information");
+      System.out.println("name: Lohitha");
+      System.out.println("Department: CSE");
+   }
+}
